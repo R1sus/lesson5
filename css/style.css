@@ -11,6 +11,10 @@ body {
     color: #666;
 }
 
+h1 {
+    font-size: 20px;
+}
+
 .container {
     max-width: 80%;
     margin: 0 auto;
@@ -32,14 +36,13 @@ body {
 
 .navigation-link {
     text-decoration: none;
-    transition: all .3s ease;
-    color: #666;
-    opacity: 1;
-    
+    transition: opacity 1s ease-in-out;
+    color: rebeccapurple;
+    opacity: 0.5;  
 }
 
 .navigation-link:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .decorated {
@@ -61,3 +64,46 @@ body {
     width: calc(100% + 8px);
 }
 
+[type="checkbox"] {
+   width: 0;
+   height: 0;
+    position: relative;
+}
+
+[type="checkbox"]:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    border: 3px dotted black;
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px antiquewhite;
+    display: block;
+    position: absolute;
+}
+
+
+[type="checkbox"]:checked:after {
+    text-align: center;
+    content: "$";
+}
+
+.test {
+    width: 300px;
+    height: 200px;
+    border: 2px solid green;
+    position: relative;
+    /* text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.center {
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
